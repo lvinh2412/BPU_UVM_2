@@ -1,0 +1,286 @@
+xrun(64): 18.03-s001: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+Loading snapshot worklib.bpu_tb_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,RNDNOXCEL: The legacy SystemVerilog constraint solver is used. Enabling the Xceligen constraint solver with "xrun/xmsim -xceligen on ..." is recommended.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/xcelium/files/xmsimrc
+xcelium> source /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+UVM_INFO /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(412) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+CDNS-UVM-1.2 (18.03-s001)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test local_pht_rw_all_4096_test...
+UVM_INFO /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh(605) @ 0: reporter [UVMTOP] UVM testbench topology:
+---------------------------------------------------------------------------
+Name                           Type                        Size  Value     
+---------------------------------------------------------------------------
+uvm_test_top                   local_pht_rw_all_4096_test  -     @2268     
+  tb                           bpu_tb                      -     @2373     
+    bpu                        bpu_env                     -     @2442     
+      tx_agent                 bpu_agent                   -     @2556     
+        driver                 bpu_driver                  -     @3330     
+          rsp_port             uvm_analysis_port           -     @3429     
+            recording_detail   integral                    32    'd1       
+          seq_item_port        uvm_seq_item_pull_port      -     @3379     
+            recording_detail   integral                    32    'd1       
+          num_sent             integral                    32    'h0       
+          recording_detail     integral                    32    'd1       
+        monitor                bpu_monitor                 -     @2588     
+          item_collected_port  uvm_analysis_port           -     @2645     
+            recording_detail   integral                    32    'd1       
+          num_pkt_col          integral                    32    'h0       
+          recording_detail     integral                    32    'd1       
+        sequencer              bpu_sequencer               -     @2676     
+          rsp_export           uvm_analysis_export         -     @2736     
+            recording_detail   integral                    32    'd1       
+          seq_item_export      uvm_seq_item_pull_imp       -     @3296     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+          arbitration_queue    array                       0     -         
+          lock_queue           array                       0     -         
+          num_last_reqs        integral                    32    'd1       
+          num_last_rsps        integral                    32    'd1       
+        is_active              uvm_active_passive_enum     1     UVM_ACTIVE
+        recording_detail       integral                    32    'd1       
+      recording_detail         integral                    32    'd1       
+    clock_and_reset            clock_and_reset_env         -     @2411     
+      agent                    clock_and_reset_agent       -     @3491     
+        driver                 clock_and_reset_driver      -     @3521     
+          rsp_port             uvm_analysis_port           -     @3626     
+            recording_detail   integral                    32    'd1       
+          seq_item_port        uvm_seq_item_pull_port      -     @3574     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+        sequencer              clock_and_reset_sequencer   -     @3660     
+          rsp_export           uvm_analysis_export         -     @3718     
+            recording_detail   integral                    32    'd1       
+          seq_item_export      uvm_seq_item_pull_imp       -     @4278     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+          arbitration_queue    array                       0     -         
+          lock_queue           array                       0     -         
+          num_last_reqs        integral                    32    'd1       
+          num_last_rsps        integral                    32    'd1       
+        recording_detail       integral                    32    'd1       
+      recording_detail         integral                    32    'd1       
+    module_env                 bpu_module_env              -     @2473     
+      bpu_item_export          uvm_analysis_export         -     @2524     
+        recording_detail       integral                    32    'd1       
+      coverage                 bpu_coverage                -     @4951     
+        analysis_imp           uvm_analysis_imp            -     @5001     
+          recording_detail     integral                    32    'd1       
+        recording_detail       integral                    32    'd1       
+      reference                bpu_reference               -     @4327     
+        expected_port          uvm_analysis_port           -     @5340     
+          recording_detail     integral                    32    'd1       
+        item_fifo              uvm_tlm_analysis_fifo #(T)  -     @5042     
+          analysis_export      uvm_analysis_imp            -     @5290     
+            recording_detail   integral                    32    'd1       
+          get_ap               uvm_analysis_port           -     @5240     
+            recording_detail   integral                    32    'd1       
+          get_peek_export      uvm_get_peek_imp            -     @5142     
+            recording_detail   integral                    32    'd1       
+          put_ap               uvm_analysis_port           -     @5191     
+            recording_detail   integral                    32    'd1       
+          put_export           uvm_put_imp                 -     @5093     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+        recording_detail       integral                    32    'd1       
+      scoreboard               bpu_scoreboard              -     @4358     
+        expected_fifo          uvm_tlm_analysis_fifo #(T)  -     @4669     
+          analysis_export      uvm_analysis_imp            -     @4920     
+            recording_detail   integral                    32    'd1       
+          get_ap               uvm_analysis_port           -     @4869     
+            recording_detail   integral                    32    'd1       
+          get_peek_export      uvm_get_peek_imp            -     @4769     
+            recording_detail   integral                    32    'd1       
+          put_ap               uvm_analysis_port           -     @4819     
+            recording_detail   integral                    32    'd1       
+          put_export           uvm_put_imp                 -     @4717     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+        item_fifo              uvm_tlm_analysis_fifo #(T)  -     @4390     
+          analysis_export      uvm_analysis_imp            -     @4636     
+            recording_detail   integral                    32    'd1       
+          get_ap               uvm_analysis_port           -     @4585     
+            recording_detail   integral                    32    'd1       
+          get_peek_export      uvm_get_peek_imp            -     @4487     
+            recording_detail   integral                    32    'd1       
+          put_ap               uvm_analysis_port           -     @4536     
+            recording_detail   integral                    32    'd1       
+          put_export           uvm_put_imp                 -     @4438     
+            recording_detail   integral                    32    'd1       
+          recording_detail     integral                    32    'd1       
+        compare_policy         comp_t                      1     UVM       
+        recording_detail       integral                    32    'd1       
+      recording_detail         integral                    32    'd1       
+    recording_detail           integral                    32    'd1       
+---------------------------------------------------------------------------
+
+SDI/Verilog Transaction Recording Facility Version 18.03-s001
+SDI2 Transaction Recording API Version 18.03-s001
+UVM_INFO ../clock_and_reset/clock_and_reset_seq.sv(20) @ 0: uvm_test_top.tb.clock_and_reset.agent.sequencer@@clk10_rst5_seq.cr [clock_and_reset_sequence] starting body clock_and_reset_wait_seq
+UVM_INFO ./lib/bpu_test_base.sv(103) @ 100000: uvm_test_top [TEST_4.4 (local_pht_rw_all_4096_test)] >>> PHA [A_addressing_sweep_4096]
+UVM_INFO ./lib/bpu_test_base.sv(620) @ 82026000: uvm_test_top [TEST_4.4 (local_pht_rw_all_4096_test)] dinh dia chi 4096 entry: sai 0/4096
+UVM_INFO ./lib/bpu_test_base.sv(103) @ 82026000: uvm_test_top [TEST_4.4 (local_pht_rw_all_4096_test)] >>> PHA [B_storage_independence_4096]
+UVM_INFO ./lib/bpu_test_base.sv(620) @ 82026000: uvm_test_top [TEST_4.4 (local_pht_rw_all_4096_test)] doc lap luu tru 4096 entry: sai 0/4096
+UVM_INFO /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_objection.svh(1271) @ 84026000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../bpu_module/bpu_scoreboard.sv(138) @ 84026000: uvm_test_top.tb.module_env.scoreboard [bpu_scoreboard] Scoreboard: Checking BPU Scoreboard
+UVM_INFO ../bpu_module/bpu_scoreboard.sv(140) @ 84026000: uvm_test_top.tb.module_env.scoreboard [bpu_scoreboard] Check:
+
+   BPU Scoreboard Empty!
+
+UVM_INFO ../bpu_agent/bpu_driver.sv(84) @ 84026000: uvm_test_top.tb.bpu.tx_agent.driver [bpu_driver] Report: BPU driver sent 8192 items
+UVM_INFO ../bpu_agent/bpu_monitor.sv(60) @ 84026000: uvm_test_top.tb.bpu.tx_agent.monitor [bpu_monitor] Report: BPU Monitor Collected 8397 Items
+xmsim: *N,COVNSM: (File: ../bpu_module/bpu_coverage.sv, Line: 450):(Time: 84026 NS + 38) Sampling of covergroup type "bpu_coverage::cg_bpu" (../bpu_module/bpu_coverage.sv:65), referred in the statement is not enabled. As a result, coverage methods get_coverage(), get_inst_coverage(), get_hit_count(), and get_inst_hit_count() will return 0 coverage.
+UVM_INFO ../bpu_module/bpu_coverage.sv(516) @ 84026000: uvm_test_top.tb.module_env.coverage [bpu_coverage] 
+========================= BPU Coverage Report =========================
+  cg_bpu overall                     0.00%
+  ---- COVERPOINTS (30) ------------------------------------------
+  cp_is_branch                       0.00%
+  cp_branch_taken                    0.00%
+  cp_fetch_is_branch                 0.00%
+  cp_flush_in (4 bin)                0.00%
+  cp_fetch_ready [NEW]               0.00%
+  cp_halt                            0.00%
+  cp_branch_offset_sign              0.00%
+  cp_pc_region                       0.00%
+  cp_btb_valid_pc                    0.00%
+  cp_btb_valid_nxpc                  0.00%
+  cp_btb_valid_nxpc2                 0.00%
+  cp_btb_target_value                0.00%
+  cp_local_pht_state                 0.00%
+  cp_global_pht_state                0.00%
+  cp_choice_state                    0.00%
+  cp_local_bht_history 12b           0.00%
+  cp_ghr_value                       0.00%
+  cp_predict_taken_nxpc2             0.00%
+  cp_choice_decision                 0.00%
+  cp_predictor_agreement             0.00%
+  cp_pred_was_hit [NEW]              0.00%
+  cp_predicted_taken [NEW]           0.00%
+  cp_carry_local [NEW]               0.00%
+  cp_carry_global [NEW]              0.00%
+  cp_carry_agreement [NEW]           0.00%
+  cp_flush_value                     0.00%
+  cp_bpu_nxpc2_valid                 0.00%
+  cp_redirect_tier [NEW]             0.00%
+  cp_corr_case (4 bin)               0.00%
+  cp_outcome                         0.00%
+  ---- CROSSES (28) ----------------------------------------------
+  cx_branch_x_halt                   0.00%
+  cx_branch_x_flush_in               0.00%
+  cx_branch_x_taken                  0.00%
+  cx_fetch_x_flush_in                0.00%
+  cx_btb_pc_x_branch                 0.00%
+  cx_btb_nxpc_x_fetch_branch         0.00%
+  cx_local_pht_x_taken               0.00%
+  cx_global_pht_x_taken              0.00%
+  cx_choice_x_taken                  0.00%
+  cx_choice_decision_x_agree         0.00%
+  cx_flush_truth_table [NEW]         0.00%
+  cx_tier_x_corr [NEW]               0.00%
+  cx_flush_x_branch                  0.00%
+  cx_flush_x_predicted_taken [NEW]   0.00%
+  cx_pc_region_x_btb                 0.00%
+  cx_local_pht_x_global_pht          0.00%
+  cx_ghr_x_global_pht                0.00%
+  cx_bht_x_local_pht                 0.00%
+  cx_flush_in_x_fetch                0.00%
+  cx_choice_decision_x_outcome       0.00%
+  cx_tier_x_flush                    0.00%
+  cx_btb_nxpc2_x_predict_nxpc2       0.00%
+  cx_gating_scope [NEW]              0.00%
+  cx_choice_update_table [NEW]       0.00%
+  cx_choice_x_carry_agree [NEW]      0.00%
+  cx_predicted_x_hit [NEW]           0.00%
+  cx_halt_x_predicted_taken [NEW]    0.00%
+  cx_pc_region_x_tier [NEW]          0.00%
+=======================================================================
+UVM_INFO ../bpu_module/bpu_reference.sv(372) @ 84026000: uvm_test_top.tb.module_env.reference [BPU_REF] 
+========================= BPU Reference Model Statistics =========================
+  Total cycles            : 8397
+  Total branches          : 4096
+  BTB hits / misses       : 4095 / 1  (hit rate: 99.98%)
+  Mispredictions          : 0  (rate: 0.00%)
+  Choice used global/local: 0 / 4096
+  Local  predictor correct: 4082  (accuracy: 99.66%)
+  Global predictor correct: 4084  (accuracy: 99.71%)
+  Flush counts            : [0]=4301  [1]=4096  [2]=0
+  Speculation cases       : S1=0  S2=8392  S3=0  (none=5)
+  Correction  cases       : C1=1  C2=0  C3=0  (none=8396)
+===================================================================================
+UVM_INFO ../bpu_module/bpu_scoreboard.sv(156) @ 84026000: uvm_test_top.tb.module_env.scoreboard [bpu_scoreboard] Report:
+
+   Scoreboard: BPU Output Compare Statistics 
+          Total compares:	8397
+     Matches:	8397
+     Miscompares (total):	0
+       - bpu_nxpc2:	0
+       - bpu_nxpc2_valid:	0
+       - bpu_flush:	0
+
+
+UVM_INFO ../bpu_module/bpu_scoreboard.sv(162) @ 84026000: uvm_test_top.tb.module_env.scoreboard [bpu_scoreboard] Status:
+
+Simulation PASSED
+
+UVM_INFO ./lib/bpu_test_base.sv(136) @ 84026000: uvm_test_top [TEST_4.4 (local_pht_rw_all_4096_test)] PASSED
+    pha A_addressing_sweep_4096          : 0 loi
+    pha B_storage_independence_4096      : 0 loi
+
+UVM_INFO /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_catcher.svh(705) @ 84026000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_report_server.svh(847) @ 84026000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   19
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[BPU_REF]     1
+[RNTST]     1
+[TEST_4.4 (local_pht_rw_all_4096_test)]     5
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[bpu_coverage]     1
+[bpu_driver]     1
+[bpu_monitor]     1
+[bpu_scoreboard]     4
+[clock_and_reset_sequence]     1
+
+Simulation complete via $finish(1) at time 84026 NS + 58
+/home/abc24/eda/cadence/xcelium/XCELIUM1803/tools/methodology/UVM/CDNS-1.2/sv/src/base/uvm_root.svh:543     $finish;
+xcelium> exit
